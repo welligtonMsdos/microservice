@@ -39,3 +39,8 @@ C:\Projetos\Microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\D
 C:\Projetos\Microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\MySqlConnector.dll
 C:\Projetos\Microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Projetos\Microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Projetos\Microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\Humanizer.dll
+C:\Projetos\Microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Projetos\Microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Projetos\Microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Projetos\Microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\System.CodeDom.dll

@@ -1,4 +1,7 @@
 
+using GeekShopping.ProductAPI.Model.Context;
+using Microsoft.EntityFrameworkCore;
+
 namespace GeekShopping.ProductAPI
 {
     public class Program
@@ -6,6 +9,10 @@ namespace GeekShopping.ProductAPI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            var connectionString = builder.Configuration.GetConnectionString("MySQLConnection");
+
+            builder.Services.AddDbContext<MySQLContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
             // Add services to the container.
 
