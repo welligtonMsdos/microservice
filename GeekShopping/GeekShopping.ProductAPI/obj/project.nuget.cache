@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "csGw5ip0AElg5bwUrMiX3KpGPFri5nIsEDJJl+AH5qUc0T87Ei0BceIUzUrgs7k0tZQmYzbPAD05E4FGKWDztQ==",
+  "dgSpecHash": "0EeD0vTOiXDJmFhkwuTBj6rAu9k49K5V9qPIk6Decc7ddoGWapbGc5ye/kKJUxw0/wi4RJQGtEsTFuxnrgsVxQ==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\Microservice\\microservice\\GeekShopping\\GeekShopping.ProductAPI\\GeekShopping.ProductAPI.csproj",
+  "projectFilePath": "C:\\Projetos\\Microservice\\microservice\\microservice\\GeekShopping\\GeekShopping.ProductAPI\\GeekShopping.ProductAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

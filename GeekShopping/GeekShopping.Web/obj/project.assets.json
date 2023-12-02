@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\Microservice\\microservice\\GeekShopping\\GeekShopping.Web\\GeekShopping.Web.csproj",
+      "projectUniqueName": "C:\\Projetos\\Microservice\\microservice\\microservice\\GeekShopping\\GeekShopping.Web\\GeekShopping.Web.csproj",
       "projectName": "GeekShopping.Web",
-      "projectPath": "C:\\Projetos\\Microservice\\microservice\\GeekShopping\\GeekShopping.Web\\GeekShopping.Web.csproj",
+      "projectPath": "C:\\Projetos\\Microservice\\microservice\\microservice\\GeekShopping\\GeekShopping.Web\\GeekShopping.Web.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\Microservice\\microservice\\GeekShopping\\GeekShopping.Web\\obj\\",
+      "outputPath": "C:\\Projetos\\Microservice\\microservice\\microservice\\GeekShopping\\GeekShopping.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",

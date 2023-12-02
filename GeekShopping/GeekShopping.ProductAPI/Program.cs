@@ -35,7 +35,6 @@ namespace GeekShopping.ProductAPI
 
             app.UseAuthorization();
 
-
             app.MapControllers();
 
             app.Run();

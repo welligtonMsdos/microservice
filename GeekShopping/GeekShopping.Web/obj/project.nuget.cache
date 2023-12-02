@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O2fGKAeXZhHNST+OmPHUFZDvQoeDkZhKaYS6W9Vk8v72BDTnfGIBiXkEAEA2syk6CbHb2G7n9NwUOoLiVgewDw==",
+  "dgSpecHash": "TZgpIvuV+c3NmnjnwwjjM0yj4hwyNDlZa3vCmpUhuVPGHPbl73AEDL/2kRclpsKtu+u3pO3+VvoGdlOBbin33Q==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\Microservice\\microservice\\GeekShopping\\GeekShopping.Web\\GeekShopping.Web.csproj",
+  "projectFilePath": "C:\\Projetos\\Microservice\\microservice\\microservice\\GeekShopping\\GeekShopping.Web\\GeekShopping.Web.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
