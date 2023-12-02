@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using GeekShopping.ProductAPI.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace GeekShopping.ProductAPI.Model.Context;
 

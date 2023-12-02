@@ -44,3 +44,4 @@ C:\Projetos\Microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\D
 C:\Projetos\Microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Projetos\Microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Projetos\Microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\System.CodeDom.dll
+C:\Projetos\Microservice\microservice\GeekShopping\GeekShopping.ProductAPI\obj\Debug\net7.0\GeekShopping.ProductAPI.sourcelink.json
