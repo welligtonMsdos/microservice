@@ -25,7 +25,7 @@ public class ProductController : ControllerBase
     {
         var product = await _repository.FindById(id);
 
-        if (product == null) return NotFound();
+        if (product.Id <= 0) return NotFound();
 
         return Ok(product);
     }
