@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Projetos\\Microservice\\microservice\\microservice\\GeekShopping\\GeekShopping.Web\\wwwroot\\imagens\\favicon.png",
+      "PackagePath": "staticwebassets\\imagens\\favicon.png"
+    },
+    {
+      "Id": "C:\\Projetos\\Microservice\\microservice\\microservice\\GeekShopping\\GeekShopping.Web\\wwwroot\\imagens\\geek_shopping.png",
+      "PackagePath": "staticwebassets\\imagens\\geek_shopping.png"
+    },
+    {
       "Id": "C:\\Projetos\\Microservice\\microservice\\microservice\\GeekShopping\\GeekShopping.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
