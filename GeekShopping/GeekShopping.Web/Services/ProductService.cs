@@ -1,6 +1,6 @@
 ﻿using GeekShopping.Web.Models;
 using GeekShopping.Web.Services.IServices;
-using GeekShopping.Web.Services.Utils;
+using GeekShopping.Web.Utils;
 
 namespace GeekShopping.Web.Services;
 

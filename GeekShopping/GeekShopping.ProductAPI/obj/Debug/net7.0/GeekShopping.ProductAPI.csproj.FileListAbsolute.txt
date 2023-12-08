@@ -92,3 +92,10 @@ C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.Pro
 C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.ProductAPI\obj\Debug\net7.0\GeekShopping.ProductAPI.pdb
 C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.ProductAPI\obj\Debug\net7.0\GeekShopping.ProductAPI.genruntimeconfig.cache
 C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.ProductAPI\obj\Debug\net7.0\ref\GeekShopping.ProductAPI.dll
+C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
