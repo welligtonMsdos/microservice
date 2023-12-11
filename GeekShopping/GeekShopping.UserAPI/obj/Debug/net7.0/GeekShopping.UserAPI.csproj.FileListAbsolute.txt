@@ -53,3 +53,6 @@ C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.Use
 C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.UserAPI\obj\Debug\net7.0\GeekShopping.UserAPI.pdb
 C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.UserAPI\obj\Debug\net7.0\GeekShopping.UserAPI.genruntimeconfig.cache
 C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.UserAPI\obj\Debug\net7.0\ref\GeekShopping.UserAPI.dll
+C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.UserAPI\bin\Debug\net7.0\FluentValidation.dll
+C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.UserAPI\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
+C:\Projetos\Microservice\microservice\microservice\GeekShopping\GeekShopping.UserAPI\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll

@@ -1,4 +1,5 @@
-﻿using GeekShopping.UserAPI.Model;
+﻿using GeekShopping.UserAPI.Data.ValueObjects;
+using GeekShopping.UserAPI.Model;
 using GeekShopping.UserAPI.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -18,7 +19,7 @@ public class UserController : ControllerBase
 
     [HttpGet]   
     [Authorize]
-    public async Task<ActionResult<IEnumerable<User>>> FindAll()
+    public async Task<ActionResult<IEnumerable<UserResult>>> FindAll()
     {
         var users = await _repository.FindAll();
 
@@ -28,12 +29,43 @@ public class UserController : ControllerBase
     [HttpGet("{id}")]    
     [Authorize(Roles = "admin")]
     
-    public async Task<ActionResult<User>> FindById(long id)
+    public async Task<ActionResult<UserResult>> FindById(long id)
     {
         var user = await _repository.FindById(id);
 
         if (user == null) return NotFound();
 
         return Ok(user);
+    }
+
+    [HttpPost]
+    [HttpPost]
+    public async Task<ActionResult<UserViewModel>> Create([FromBody] UserViewModel vo)
+    {
+        if (vo == null) return BadRequest();
+
+        var user = await _repository.Create(vo);
+
+        return Ok(user);
+    }
+
+    [HttpPut]
+    public async Task<ActionResult<UserViewModelWithId>> Update([FromBody] UserViewModelWithId vo)
+    {
+        if (vo == null) return BadRequest();
+
+        var user = await _repository.Update(vo);
+
+        return Ok(user);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> Delete(long id)
+    {
+        var status = await _repository.Delete(id);
+
+        if (!status) return BadRequest();
+
+        return Ok(status);
     }
 }

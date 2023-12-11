@@ -13,20 +13,20 @@ public class UserRepository : IUserRepository
 
     public UserRepository(MySQLContext context, IMapper mapper) => (_context, _mapper) = (context, mapper);
 
-    public async Task<IEnumerable<UserVO>> FindAll()
+    public async Task<IEnumerable<UserResult>> FindAll()
     {
         var users = await _context.Users.ToListAsync();
 
-        return _mapper.Map<List<UserVO>>(users);
+        return _mapper.Map<List<UserResult>>(users);
     }
 
-    public async Task<User> FindById(long id)
+    public async Task<UserResult> FindById(long id)
     {
         var user = await _context.Users
              .Where(p => p.Id == id)
              .FirstOrDefaultAsync() ?? new User();
 
-        return user;
+        return _mapper.Map<UserResult>(user);
     }
 
     public async Task<User> FindByNameAndPassword(string userName, string password)
@@ -38,7 +38,7 @@ public class UserRepository : IUserRepository
         return user;
     }
 
-    public async Task<UserVO> Create(UserVO vo)
+    public async Task<UserResult> Create(UserViewModel vo)
     {
         var user = _mapper.Map<User>(vo);
 
@@ -46,10 +46,10 @@ public class UserRepository : IUserRepository
 
         await _context.SaveChangesAsync();
 
-        return _mapper.Map<UserVO>(user);
+        return _mapper.Map<UserResult>(user);
     }
 
-    public async Task<UserVO> Update(UserVO vo)
+    public async Task<UserResult> Update(UserViewModelWithId vo)
     {
         var user = _mapper.Map<User>(vo);
 
@@ -57,7 +57,7 @@ public class UserRepository : IUserRepository
 
         await _context.SaveChangesAsync();
 
-        return _mapper.Map<UserVO>(user);
+        return _mapper.Map<UserResult>(user);
     }
 
     public async Task<bool> Delete(long id)

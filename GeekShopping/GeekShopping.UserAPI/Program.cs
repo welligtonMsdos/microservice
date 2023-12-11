@@ -16,7 +16,9 @@ namespace GeekShopping.UserAPI
 
             var connectionString = builder.Configuration.GetConnectionString("MySQLConnection");
 
-            builder.Services.AddDbContext<MySQLContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));                     
+            builder.Services.AddDbContext<MySQLContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
+            builder.Services.AddValidatorCollection(builder.Configuration);
 
             builder.Services.AddControllers();
 

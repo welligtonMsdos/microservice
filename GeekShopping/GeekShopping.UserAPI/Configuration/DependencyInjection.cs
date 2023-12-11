@@ -1,7 +1,7 @@
 ﻿using GeekShopping.UserAPI.Repository;
 using GeekShopping.UserAPI.Services;
 
-namespace GeekShopping.UserAPI;
+namespace GeekShopping.UserAPI.Configuration;
 
 public static class DependencyInjection
 {
