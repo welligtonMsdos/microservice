@@ -29,10 +29,10 @@ public class UserRepository : IUserRepository
         return _mapper.Map<UserResult>(user);
     }
 
-    public async Task<User> FindByNameAndPassword(string userName, string password)
+    public async Task<User> FindByNameAndPassword(UserVO vo)
     {
         var user = await _context.Users
-            .Where(p=> p.UserName.Equals(userName) && p.Password.Equals(password))
+            .Where(p=> p.UserName.Equals(vo.UserName) && p.Password.Equals(vo.Password))
             .FirstOrDefaultAsync() ?? new User();
 
         return user;

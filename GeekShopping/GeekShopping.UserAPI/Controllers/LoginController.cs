@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace GeekShopping.UserAPI.Controllers;
 
 [ApiController]
-[Route("v1")]
+[Route("api/v1/[controller]")]
 public class LoginController : ControllerBase
 {
     private readonly IUserRepository _repository;
@@ -22,7 +22,7 @@ public class LoginController : ControllerBase
     [Route("login")]
     public async Task<ActionResult<dynamic>> AuthenticateAsync([FromBody] UserVO model)
     {
-        var user = await _repository.FindByNameAndPassword(model.UserName, model.Password);
+        var user = await _repository.FindByNameAndPassword(model);
 
         if (user == null) return NotFound(new {message = "Invalid username or password" });
 

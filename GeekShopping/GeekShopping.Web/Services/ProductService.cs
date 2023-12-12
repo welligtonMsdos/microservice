@@ -35,7 +35,6 @@ public class ProductService : IProductService
         if (response.IsSuccessStatusCode)
             return await response.ReadContentAs<ProductModel>();
         else throw new Exception("Something went wrong when calling API");
-
     }
 
     public async Task<ProductModel> UpdateProduct(ProductModel product)

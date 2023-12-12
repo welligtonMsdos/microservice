@@ -1,5 +1,4 @@
 ﻿using GeekShopping.UserAPI.Data.ValueObjects;
-using GeekShopping.UserAPI.Model;
 using GeekShopping.UserAPI.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -7,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace GeekShopping.UserAPI.Controllers;
 
 [ApiController]
-[Route("v1")]
+[Route("api/v1/[controller]")]
 public class UserController : ControllerBase
 {
     private readonly IUserRepository _repository;
@@ -26,9 +25,21 @@ public class UserController : ControllerBase
         return Ok(users);
     }
 
-    [HttpGet("{id}")]    
-    [Authorize(Roles = "admin")]
-    
+    [HttpGet("{UserName}/{Password}")]
+    public async Task<ActionResult<UserResult>> FindByNameAndPassword(string UserName, string Password)
+    {
+        UserVO vo = new UserVO();
+        vo.UserName = UserName;
+        vo.Password = Password;
+
+        var user = await _repository.FindByNameAndPassword(vo);
+
+        if (user == null) return NotFound();
+
+        return Ok(user);
+    }
+
+    [HttpGet("{id}")]  
     public async Task<ActionResult<UserResult>> FindById(long id)
     {
         var user = await _repository.FindById(id);
