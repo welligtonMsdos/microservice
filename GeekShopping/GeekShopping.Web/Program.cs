@@ -21,7 +21,7 @@ public class Program
             {
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
                 options.SlidingExpiration = true;
-                options.AccessDeniedPath = "/Forbidden/";
+                options.AccessDeniedPath = "/Home/Login";
             });
 
         // Add services to the container.
