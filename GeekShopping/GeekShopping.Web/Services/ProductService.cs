@@ -14,35 +14,35 @@ public class ProductService : IProductService
         _cliente = cliente ?? throw new ArgumentNullException(nameof(cliente));
     }
 
-    public async Task<IEnumerable<ProductModel>> FindAllProducts()
+    public async Task<IEnumerable<Product>> FindAllProducts()
     {
         var response = await _cliente.GetAsync(BASE_PATH);
 
-        return await response.ReadContentAs<List<ProductModel>>();
+        return await response.ReadContentAs<List<Product>>();
     }
 
-    public async Task<ProductModel> FindProductById(long id)
+    public async Task<Product> FindProductById(long id)
     {
         var response = await _cliente.GetAsync($"{BASE_PATH}/{id}");
 
-        return await response.ReadContentAs<ProductModel>();
+        return await response.ReadContentAs<Product>();
     }
 
-    public async Task<ProductModel> CreateProduct(ProductModel product)
+    public async Task<Product> CreateProduct(Product product)
     {
         var response = await _cliente.PostAsJson(BASE_PATH, product);
 
         if (response.IsSuccessStatusCode)
-            return await response.ReadContentAs<ProductModel>();
+            return await response.ReadContentAs<Product>();
         else throw new Exception("Something went wrong when calling API");
     }
 
-    public async Task<ProductModel> UpdateProduct(ProductModel product)
+    public async Task<Product> UpdateProduct(Product product)
     {
         var response = await _cliente.PutAsJson(BASE_PATH, product);
 
         if (response.IsSuccessStatusCode)
-            return await response.ReadContentAs<ProductModel>();
+            return await response.ReadContentAs<Product>();
         else throw new Exception("Something went wrong when calling API");
     }
 

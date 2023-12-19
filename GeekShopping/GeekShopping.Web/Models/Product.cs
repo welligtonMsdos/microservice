@@ -1,6 +1,6 @@
 ﻿namespace GeekShopping.Web.Models;
 
-public class ProductModel
+public class Product
 {
     public long Id { get; set; }
     public string Name { get; set; }

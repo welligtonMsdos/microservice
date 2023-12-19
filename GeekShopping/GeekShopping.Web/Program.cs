@@ -21,11 +21,13 @@ public class Program
             {
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
                 options.SlidingExpiration = true;
-                options.AccessDeniedPath = "/Home/Login";
+                options.AccessDeniedPath = "/Home/Login";                
             });
 
         // Add services to the container.
-        builder.Services.AddControllersWithViews(); 
+        builder.Services.AddControllersWithViews();
+
+        builder.Services.AddHttpContextAccessor();
 
         var app = builder.Build();
 
