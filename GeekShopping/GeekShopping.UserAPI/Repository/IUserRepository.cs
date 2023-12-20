@@ -6,7 +6,7 @@ namespace GeekShopping.UserAPI.Repository;
 public interface IUserRepository
 {
     Task<IEnumerable<UserResult>> FindAll();
-    Task<UserResult> FindById(long id);
+    Task<UserViewModelWithId> FindById(long id);
     Task<User> FindByNameAndPassword(UserVO vo);
     Task<UserResult> Create(UserViewModel vo);
     Task<UserResult> Update(UserViewModelWithId vo);

@@ -40,7 +40,7 @@ public class UserController : ControllerBase
     }
 
     [HttpGet("{id}")]  
-    public async Task<ActionResult<UserResult>> FindById(long id)
+    public async Task<ActionResult<UserViewModelWithId>> FindById(long id)
     {
         var user = await _repository.FindById(id);
 

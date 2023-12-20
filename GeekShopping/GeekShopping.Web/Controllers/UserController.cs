@@ -1,4 +1,5 @@
 ﻿using GeekShopping.Web.Data.ValueObjects;
+using GeekShopping.Web.Models;
 using GeekShopping.Web.Services.IServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -37,6 +38,49 @@ public class UserController : Controller
 
             if (response != null) return RedirectToAction(nameof(UserIndex));
         }
+
+        return View(model);
+    }
+
+    [Authorize(Roles = "admin,client")]
+    public async Task<IActionResult> UserUpdate(int id)
+    {
+        var model = await _userService.FindById(id);
+
+        if (model != null) return View(model);
+
+        return NotFound();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> UserUpdate(UserViewModelWithId model)
+    {
+        if (ModelState.IsValid)
+        {
+            var response = await _userService.Update(model);
+
+            if (response != null) return RedirectToAction(nameof(UserIndex));
+        }
+
+        return View(model);
+    }
+
+    [Authorize(Roles = "admin")]
+    public async Task<IActionResult> UserDelete(int id)
+    {
+        var model = await _userService.FindById(id);
+
+        if (model != null) return View(model);
+
+        return NotFound();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> UserDelete(User model)
+    {
+        var response = await _userService.Delete(model.Id);
+
+        if (response) return RedirectToAction(nameof(UserIndex));
 
         return View(model);
     }

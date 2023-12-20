@@ -12,6 +12,7 @@ public class MappingConfig : Profile
         CreateMap<UserResult, User>().ReverseMap();
         CreateMap<UserViewModel, User>().ReverseMap();
         CreateMap<UserViewModel, UserResult>().ReverseMap();
-        CreateMap<UserViewModelWithId,  User>().ReverseMap();
+        CreateMap<UserViewModelWithId, User>().ReverseMap();
+        CreateMap<UserViewModelWithId,  UserResult>().ReverseMap();
     }
 }

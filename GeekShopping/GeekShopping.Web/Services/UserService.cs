@@ -37,11 +37,11 @@ public class UserService : IUserService
         return await response.ReadContentAs<List<UserResult>>();
     }
 
-    public async Task<UserResult> FindById(long id)
+    public async Task<UserViewModelWithId> FindById(long id)
     {
         var response = await _cliente.GetAsync($"{BASE_PATH}/{id}");
 
-        return await response.ReadContentAs<UserResult>();
+        return await response.ReadContentAs<UserViewModelWithId>();
     }
 
     public async Task<User> FindByNameAndPassword(UserVO vo)

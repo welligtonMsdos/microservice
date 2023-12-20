@@ -20,13 +20,13 @@ public class UserRepository : IUserRepository
         return _mapper.Map<List<UserResult>>(users);
     }
 
-    public async Task<UserResult> FindById(long id)
+    public async Task<UserViewModelWithId> FindById(long id)
     {
         var user = await _context.Users
              .Where(p => p.Id == id)
              .FirstOrDefaultAsync() ?? new User();
 
-        return _mapper.Map<UserResult>(user);
+        return _mapper.Map<UserViewModelWithId>(user);
     }
 
     public async Task<User> FindByNameAndPassword(UserVO vo)

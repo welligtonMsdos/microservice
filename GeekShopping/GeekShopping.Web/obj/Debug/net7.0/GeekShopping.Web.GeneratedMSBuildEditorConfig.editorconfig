@@ -58,8 +58,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Projetos/Microservice/microservice/microservice/GeekShopping/GeekShopping.Web/Views/User/UserDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Projetos/Microservice/microservice/microservice/GeekShopping/GeekShopping.Web/Views/User/UserIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VySW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projetos/Microservice/microservice/microservice/GeekShopping/GeekShopping.Web/Views/User/UserUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projetos/Microservice/microservice/microservice/GeekShopping/GeekShopping.Web/Views/_ViewImports.cshtml]
