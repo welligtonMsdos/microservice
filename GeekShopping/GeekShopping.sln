@@ -19,7 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit", "Unit", "{0C0EA7F5-B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{E9F21DFC-E3C9-4ABF-A7B5-550B2CDA25E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShoppingUserAPI.Test", "GeekShoppingUserAPI.Test\GeekShoppingUserAPI.Test.csproj", "{E109A546-1211-4E3C-A1C8-330638A1B59C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShoppingUserAPI.Test", "GeekShoppingUserAPI.Test\GeekShoppingUserAPI.Test.csproj", "{E109A546-1211-4E3C-A1C8-330638A1B59C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.CartAPI", "GeekShopping.CartAPI\GeekShopping.CartAPI.csproj", "{CB56E47B-8CC4-41D7-B6AD-2E5027D8DA94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{E109A546-1211-4E3C-A1C8-330638A1B59C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E109A546-1211-4E3C-A1C8-330638A1B59C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E109A546-1211-4E3C-A1C8-330638A1B59C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB56E47B-8CC4-41D7-B6AD-2E5027D8DA94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB56E47B-8CC4-41D7-B6AD-2E5027D8DA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB56E47B-8CC4-41D7-B6AD-2E5027D8DA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB56E47B-8CC4-41D7-B6AD-2E5027D8DA94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{0C0EA7F5-BE35-4C84-A99A-F5A7214A7C1F} = {C30C2637-A573-43DD-B2D2-437CBAFB7900}
 		{E9F21DFC-E3C9-4ABF-A7B5-550B2CDA25E5} = {C30C2637-A573-43DD-B2D2-437CBAFB7900}
 		{E109A546-1211-4E3C-A1C8-330638A1B59C} = {0C0EA7F5-BE35-4C84-A99A-F5A7214A7C1F}
+		{CB56E47B-8CC4-41D7-B6AD-2E5027D8DA94} = {C29536EA-B9B7-41BF-8374-E98DA22CB77F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {59D82A28-9801-4320-96EF-BEA5AC5A690C}
