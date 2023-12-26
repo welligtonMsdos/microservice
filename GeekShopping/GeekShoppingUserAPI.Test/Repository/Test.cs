@@ -3,9 +3,9 @@ using GeekShoppingUserAPI.Test.Model;
 
 namespace GeekShoppingUserAPI.Test.Repository;
 
-internal class UserRepository : IUserRepository
+internal class Test : ITest
 {
-    public UserRepository()
+    public Test()
     {
             
     }
