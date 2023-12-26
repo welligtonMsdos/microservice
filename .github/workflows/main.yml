@@ -7,34 +7,39 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-latest  
     steps:
-      - name: Run a one-line script     
+      - name: Run a one-line script 
+        uses: actions/checkout@v2
 
-  deploy-dev:
-     runs-on: windows-latest
-     environment: 
-       name: Desenvolvimento
-     needs: build
-     steps:
-      - name: Run a one-line script
+  desenvolvimento:
+   runs-on: windows-latest  
+   needs:
+    - build
+   environment:
+    name: Desenvolvimento
+   steps:
+      - name: Run a one-line script 
+        uses: actions/checkout@v2
+        with:
+         target-branch: 'Desenvolvimento'
+         secrets: inherit
+  homologacao:
+   runs-on: windows-latest  
+   needs:
+    - desenvolvimento
+   environment:
+    name: Homologacao
+   steps:
+      - name: Run a one-line script 
+        uses: actions/checkout@v2
 
-  deploy-hmg:
-     runs-on: windows-latest
-     environment: 
-       name: Homologacao
-     needs: deploy-dev
-     steps:
-      - name: Run a one-line script
-
-  deploy-pro:
-     runs-on: windows-latest
-     environment: 
-       name: Producao
-     needs:  deploy-hmg
-     steps:
-      - name: Run a one-line script
-
-    
-  
-  
+  producao:
+   runs-on: windows-latest  
+   needs:
+    - homologacao
+   environment:
+    name: Producao
+   steps:
+      - name: Run a one-line script 
+        uses: actions/checkout@v2      
