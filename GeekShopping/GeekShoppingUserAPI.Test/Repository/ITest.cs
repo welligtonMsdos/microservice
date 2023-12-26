@@ -3,7 +3,7 @@ using GeekShoppingUserAPI.Test.Model;
 
 namespace GeekShoppingUserAPI.Test.Repository;
 
-internal interface IUserRepository
+internal interface ITest
 {
     Task<IEnumerable<UserResult>> FindAll();
     Task<UserViewModelWithId> FindById(long id);
