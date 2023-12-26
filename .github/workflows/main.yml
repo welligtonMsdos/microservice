@@ -7,12 +7,12 @@ on:
 
 jobs:
   build:
-    runs-on: microsservice-latest
+    runs-on: windows-latest
     steps:
       - name: Run a one-line script     
 
   deploy-dev:
-     runs-on: microsservice-latest
+     runs-on: windows-latest
      environment: 
        name: Desenvolvimento
      needs: build
@@ -20,7 +20,7 @@ jobs:
       - name: Run a one-line script
 
   deploy-hmg:
-     runs-on: microsservice-latest
+     runs-on: windows-latest
      environment: 
        name: Homologacao
      needs: deploy-dev
@@ -28,7 +28,7 @@ jobs:
       - name: Run a one-line script
 
   deploy-pro:
-     runs-on: microsservice-latest
+     runs-on: windows-latest
      environment: 
        name: Producao
      needs:  deploy-hmg
