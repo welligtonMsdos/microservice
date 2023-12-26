@@ -21,7 +21,9 @@ jobs:
    steps:
       - name: Run a one-line script 
         uses: actions/checkout@v2
-
+        with:
+         target-branch: 'Desenvolvimento'
+         secrets: inherit
   homologacao:
    runs-on: windows-latest  
    needs:
