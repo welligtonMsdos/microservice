@@ -12,7 +12,7 @@ public class CartController : ControllerBase
 
     public CartController(ICartRepository repository)
     {
-        repository = repository;
+        _repository = repository;
     }
 
     [HttpGet("find-cart/{id}")]
