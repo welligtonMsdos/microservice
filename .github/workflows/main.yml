@@ -24,22 +24,6 @@ jobs:
         with:
          target-branch: 'Desenvolvimento'
          secrets: inherit
-  homologacao:
-   runs-on: windows-latest  
-   needs:
-    - desenvolvimento
-   environment:
-    name: Homologacao
-   steps:
-      - name: Run a one-line script 
-        uses: actions/checkout@v2
+ 
 
-  producao:
-   runs-on: windows-latest  
-   needs:
-    - homologacao
-   environment:
-    name: Producao
-   steps:
-      - name: Run a one-line script 
-        uses: actions/checkout@v2      
+ 
