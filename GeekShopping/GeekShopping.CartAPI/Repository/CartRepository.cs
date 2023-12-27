@@ -22,13 +22,19 @@ public class CartRepository : ICartRepository
     {
         var cartHeader = await _context.CartHeaders
                         .FirstOrDefaultAsync(c => c.UserId == userId);
+
         if (cartHeader != null)
         {
             _context.CartDetails
                 .RemoveRange(
-                _context.CartDetails.Where(c => c.CartHeaderId == cartHeader.Id));
-            _context.CartHeaders.Remove(cartHeader);
+                _context.CartDetails
+                .Where(c => c.CartHeaderId == cartHeader.Id));
+
+            _context.CartHeaders
+                .Remove(cartHeader);
+
             await _context.SaveChangesAsync();
+
             return true;
         }
         return false;
@@ -51,7 +57,23 @@ public class CartRepository : ICartRepository
 
     public async Task<bool> RemoveCoupon(string userId)
     {
-        throw new NotImplementedException();
+        var cartHeader = await _context.CartHeaders
+            .FirstOrDefaultAsync(c => c.UserId == userId);
+
+        if (cartHeader != null)
+        {
+            _context.CartDetails
+                .RemoveRange(_context.CartDetails
+                .Where(c => c.CartHeaderId == cartHeader.Id));
+
+            _context.CartHeaders.Remove(cartHeader);
+
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
+
+        return false;
     }
 
     public async Task<bool> RemoveFromCart(long cartDetailsId)
@@ -62,7 +84,8 @@ public class CartRepository : ICartRepository
                 .FirstOrDefaultAsync(c => c.Id == cartDetailsId);
 
             int total = _context.CartDetails
-                .Where(c => c.CartHeaderId == cartDetail.CartHeaderId).Count();
+                .Where(c => c.CartHeaderId == cartDetail.CartHeaderId)
+                .Count();
 
             _context.CartDetails.Remove(cartDetail);
 
@@ -70,16 +93,19 @@ public class CartRepository : ICartRepository
             {
                 var cartHeaderToRemove = await _context.CartHeaders
                     .FirstOrDefaultAsync(c => c.Id == cartDetail.CartHeaderId);
+
                 _context.CartHeaders.Remove(cartHeaderToRemove);
             }
+
             await _context.SaveChangesAsync();
+
             return true;
         }
         catch (Exception)
         {
             return false;
         }
-    }   
+    }
 
     public async Task<CartVO> SaveOrUpdateCart(CartVO vo)
     {
@@ -98,7 +124,7 @@ public class CartRepository : ICartRepository
             .AsNoTracking()
             .FirstOrDefaultAsync(c => c.UserId == cart.CartHeader.UserId);
 
-        if(cartHeader == null)
+        if (cartHeader == null)
         {
             _context.CartHeaders.Add(cart.CartHeader);
             await _context.SaveChangesAsync();
@@ -113,7 +139,7 @@ public class CartRepository : ICartRepository
                 p => p.ProductId == vo.CartDetails.FirstOrDefault().ProductId &&
                 p.CartHeaderId == cartHeader.Id);
 
-            if(cartDetail == null)
+            if (cartDetail == null)
             {
                 cart.CartDetails.FirstOrDefault().CartHeaderId = cart.CartHeader.Id;
                 cart.CartDetails.FirstOrDefault().Product = null;
