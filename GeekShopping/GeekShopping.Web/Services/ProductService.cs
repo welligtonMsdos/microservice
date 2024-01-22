@@ -53,5 +53,5 @@ public class ProductService : IProductService
         if (response.IsSuccessStatusCode)
             return await response.ReadContentAs<bool>();
         else throw new Exception("Something went wrong when calling API");
-    }
+    }  
 }
