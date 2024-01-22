@@ -16,12 +16,15 @@ public class Program
         builder.Services.AddHttpClient<IUserService, UserService>(c =>
            c.BaseAddress = new Uri(builder.Configuration["ServiceUrls:UserAPI"]));
 
+        builder.Services.AddHttpClient<ICartService, CartService>(c =>
+           c.BaseAddress = new Uri(builder.Configuration["ServiceUrls:CartAPI"]));
+
         builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
             .AddCookie(options =>
             {
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
                 options.SlidingExpiration = true;
-                options.AccessDeniedPath = "/Home/Login";                
+                options.AccessDeniedPath = "/Home/Login";
             });
 
         // Add services to the container.
@@ -35,7 +38,7 @@ public class Program
         if (!app.Environment.IsDevelopment())
         {
             app.UseExceptionHandler("/Home/Error");
-        }           
+        }
 
         app.UseHttpsRedirection();
 

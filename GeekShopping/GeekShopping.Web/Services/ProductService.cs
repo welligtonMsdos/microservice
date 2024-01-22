@@ -6,49 +6,49 @@ namespace GeekShopping.Web.Services;
 
 public class ProductService : IProductService
 {
-    private readonly HttpClient _cliente;
+    private readonly HttpClient _client;
     public const string BASE_PATH = "api/v1/Product";
 
     public ProductService(HttpClient cliente)
     {
-        _cliente = cliente ?? throw new ArgumentNullException(nameof(cliente));
+        _client = cliente ?? throw new ArgumentNullException(nameof(cliente));
     }
 
-    public async Task<IEnumerable<Product>> FindAllProducts()
+    public async Task<IEnumerable<ProductViewModel>> FindAllProducts()
     {
-        var response = await _cliente.GetAsync(BASE_PATH);
+        var response = await _client.GetAsync(BASE_PATH);
 
-        return await response.ReadContentAs<List<Product>>();
+        return await response.ReadContentAs<List<ProductViewModel>>();
     }
 
-    public async Task<Product> FindProductById(long id)
+    public async Task<ProductViewModel> FindProductById(long id)
     {
-        var response = await _cliente.GetAsync($"{BASE_PATH}/{id}");
+        var response = await _client.GetAsync($"{BASE_PATH}/{id}");
 
-        return await response.ReadContentAs<Product>();
+        return await response.ReadContentAs<ProductViewModel>();
     }
 
-    public async Task<Product> CreateProduct(Product product)
+    public async Task<ProductViewModel> CreateProduct(ProductViewModel product)
     {
-        var response = await _cliente.PostAsJson(BASE_PATH, product);
+        var response = await _client.PostAsJson(BASE_PATH, product);
 
         if (response.IsSuccessStatusCode)
-            return await response.ReadContentAs<Product>();
+            return await response.ReadContentAs<ProductViewModel>();
         else throw new Exception("Something went wrong when calling API");
     }
 
-    public async Task<Product> UpdateProduct(Product product)
+    public async Task<ProductViewModel> UpdateProduct(ProductViewModel product)
     {
-        var response = await _cliente.PutAsJson(BASE_PATH, product);
+        var response = await _client.PutAsJson(BASE_PATH, product);
 
         if (response.IsSuccessStatusCode)
-            return await response.ReadContentAs<Product>();
+            return await response.ReadContentAs<ProductViewModel>();
         else throw new Exception("Something went wrong when calling API");
     }
 
     public async Task<bool> DeleteProductById(long id)
     {
-        var response = await _cliente.DeleteAsync($"{BASE_PATH}/{id}");
+        var response = await _client.DeleteAsync($"{BASE_PATH}/{id}");
 
         if (response.IsSuccessStatusCode)
             return await response.ReadContentAs<bool>();

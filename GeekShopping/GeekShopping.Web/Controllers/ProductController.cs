@@ -29,7 +29,7 @@ public class ProductController : Controller
     }
        
     [HttpPost]    
-    public async Task<IActionResult> ProductCreate(Product model)
+    public async Task<IActionResult> ProductCreate(ProductViewModel model)
     {
         if(ModelState.IsValid)
         {
@@ -52,7 +52,7 @@ public class ProductController : Controller
     }
    
     [HttpPost]    
-    public async Task<IActionResult> ProductUpdate(Product model)
+    public async Task<IActionResult> ProductUpdate(ProductViewModel model)
     {
         if (ModelState.IsValid)
         {
@@ -75,7 +75,7 @@ public class ProductController : Controller
     }
     
     [HttpPost]  
-    public async Task<IActionResult> ProductDelete(Product model)
+    public async Task<IActionResult> ProductDelete(ProductViewModel model)
     {
         var response = await _productService.DeleteProductById(model.Id);
 
